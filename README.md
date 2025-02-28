@@ -15,3 +15,6 @@ This project is made to display adaptable elements that allow for viewing on pop
 **Images**  
 ![alt text](SpotsImage1.png)
 Design followed on Figma
+
+**Video about project**
+*[video in google drive link](https://drive.google.com/file/d/1Vzm3fv0Q-PVTJoFRIN95883r0MqiSBO5/view?usp=sharing)
