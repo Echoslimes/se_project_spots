@@ -26,7 +26,6 @@
     color: #212121;
     text-overflow: ellipsis;
     overflow: hidden;
-    line-clamp: 3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -41,7 +40,6 @@
     opacity: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-clamp: 3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -62,6 +60,14 @@
     border-style: none;
     gap: 8px;
     color: #212121;
+}
+
+.profile__edit-btn::before {
+    content:"";
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/pencil.svg);
+    background-image: contain;
 }
 
 .profile__edit-btn:hover {
@@ -87,9 +93,12 @@
     align-self:flex-end;
 }
 
-.profile__add-btn-img {
+.profile__add-btn::before {
+    content:"";
     height: 12px;
     width: 12px;
+    background-image: url(../images/plus.svg);
+    background-size: contain;
 }
 
 .profile__add-btn:hover {
