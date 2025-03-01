@@ -1,68 +1,67 @@
 .card {
-    height: 445px;
-    width: 413px;
-
+  height: 445px;
+  width: 413px;
 }
 
 .card__image {
-    height: 413px;
-    width: 100%;
-    object-fit:cover;
-    display: block;
-    border-radius: 8px;
+  height: 413px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
 
 .card__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
 }
 
 .card__title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #212121;
-    margin: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: calc(100% - 37px);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #212121;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: calc(100% - 37px);
 }
 
 .card__like-btn {
-    background: center / contain no-repeat transparent url(../images/Union.svg);
-    width: 23px;
-    height: 20px;
-    border: none;
-    opacity: 40%;
+  background: center / contain no-repeat transparent url(../images/Union.svg);
+  width: 23px;
+  height: 20px;
+  border: none;
+  opacity: 40%;
 }
 
 .card__like-btn:hover {
-    opacity: 100%;
-    cursor: pointer;
+  opacity: 100%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
-    .card {
-        height: 318px;
-        width: 288px;
-        justify-self: center;
-    }
+  .card {
+    height: 318px;
+    width: 288px;
+    justify-self: center;
+  }
 
-    .card__image {
-        height: 288px;
-        width: 288px;
-    }
+  .card__image {
+    height: 288px;
+    width: 288px;
+  }
 
-    .card__title {
-        font-size: 16px;
-        line-height: 1;
-    }
+  .card__title {
+    font-size: 16px;
+    line-height: 1;
+  }
 
-    .card__like-btn {
-        height: 18px;
-        width: 20px;
-    }
+  .card__like-btn {
+    height: 18px;
+    width: 20px;
+  }
 }
