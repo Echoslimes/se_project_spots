@@ -75,7 +75,7 @@
   cursor: pointer;
 }
 
-.profile__add-btn {
+.profile__new-post-btn {
   margin-left: auto;
   background-color: #212121;
   color: #fcf5e5;
@@ -93,7 +93,7 @@
   align-self: flex-end;
 }
 
-.profile__add-btn::before {
+.profile__new-post-btn::before {
   content: "";
   height: 12px;
   width: 12px;
@@ -101,7 +101,7 @@
   background-size: contain;
 }
 
-.profile__add-btn:hover {
+.profile__new-post-btn:hover {
   opacity: 80%;
   cursor: pointer;
 }
@@ -140,7 +140,7 @@
     margin: 32px auto 20px;
   }
 
-  .profile__add-btn {
+  .profile__new-post-btn {
     margin: 0;
     width: 100%;
   }
