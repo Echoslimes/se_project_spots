@@ -67,7 +67,8 @@
   width: 16px;
   height: 16px;
   background-image: url(../images/pencil.svg);
-  background-image: contain;
+  background-size: contain;
+  background-repeat:no-repeat;
 }
 
 .profile__edit-btn:hover {
