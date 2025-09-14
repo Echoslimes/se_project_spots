@@ -102,8 +102,18 @@
     box-sizing: border-box;
 }
 
+.modal__form_input_type_error{
+    border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+    display: block;
+    margin-top: 8px;
+    color: rgba(255, 0, 0, 0.7);
+}
+
 .modal__input::placeholder {
-    color: rgba(33,33,33,.3)
+    color: rgba(33,33,33,.3);
 }
 
 .modal__input:hover {
@@ -123,10 +133,16 @@
     padding: 0;
 }
 
+.modal__submit_btn_inactive {
+    background-color: rgba(33,33,33,0.5);
+}
+
 .modal__submit-btn:hover {
     cursor: pointer;
     opacity: 80%;
 }
+
+
 
 .modal__image {
     max-width: 80vw;

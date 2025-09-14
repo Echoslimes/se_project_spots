@@ -36,6 +36,7 @@ const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = document.forms["profile-form"];
 const editProfileNameInput = editProfileModal.querySelector("#profile-name-input");
 const editProfileDescriptionInput = editProfileModal.querySelector("#profile-description-input");
+const editProfileSubmitBtn = editProfileModal.querySelector(".modal__submit-btn");
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
@@ -44,9 +45,11 @@ const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+
 const addCardFormEl = document.forms["new-post-form"];
 const nameInput = newPostModal.querySelector("#card-caption-input");
 const linkInput = newPostModal.querySelector("#card-image-input");
+const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardList = document.querySelector(".cards__list");
@@ -91,7 +94,6 @@ function getCardElement(data) {
 }
 
 
-
 function openModal(modal){
     modal.classList.add("modal_is-opened");
 }
@@ -104,6 +106,7 @@ editProfileBtn.addEventListener("click", function () {
     editProfileNameInput.value = profileNameEl.textContent;
     editProfileDescriptionInput.value = profileDescriptionEl.textContent;
     openModal(editProfileModal);
+    resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput]);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
@@ -123,6 +126,7 @@ function handleEditProfileSubmit(evt) {
     profileNameEl.textContent = editProfileNameInput.value;
     profileDescriptionEl.textContent = editProfileDescriptionInput.value;
     closeModal(editProfileModal);
+    disableButton(editProfileSubmitBtn, settings);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -138,8 +142,8 @@ function handleAddCardSubmit(evt) {
     const cardElement = getCardElement(inputValues);
     cardList.prepend(cardElement);
     closeModal(newPostModal);
-
     addCardFormEl.reset();
+    disableButton(cardSubmitBtn, settings);
 }
 
 addCardFormEl.addEventListener("submit", handleAddCardSubmit);
