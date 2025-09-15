@@ -110,6 +110,11 @@
     display: block;
     margin-top: 8px;
     color: rgba(255, 0, 0, 0.7);
+    visibility: hidden;
+}
+
+.modal__error_visible {
+    visibility: visible;
 }
 
 .modal__input::placeholder {
@@ -133,7 +138,7 @@
     padding: 0;
 }
 
-.modal__submit_btn_inactive {
+.modal__submit-btn_inactive {
     background-color: rgba(33,33,33,0.5);
 }
 
