@@ -51,7 +51,7 @@
       <footer class="footer page__section">
         <p class="footer__copyright">2023 &copy; Spots</p>
       </footer>
-      <div class="modal" id="edit-profile-modal" >
+      <div class="modal" id="edit-profile-modal" tabindex="-1">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
@@ -63,14 +63,14 @@
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
-              <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself" required minlenght="2" maxlength="200">
+              <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself" required minlength="2" maxlength="200">
               <span id="profile-description-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-      <div class="modal" id="new-post-modal">
+      <div class="modal" id="new-post-modal" tabindex="-1">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New post</h2>
@@ -89,7 +89,7 @@
           </form>
         </div>
       </div>
-      <div class="modal" id="preview-modal">
+      <div class="modal" id="preview-modal" tabindex="-1">
         <div class="modal__image-container">
           <button type ="button" class="modal__close-btn modal__close-btn_type_preview"></button>
           <img class="modal__image" src="#" alt="">

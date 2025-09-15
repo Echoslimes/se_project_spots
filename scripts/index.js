@@ -29,6 +29,7 @@ const initialCards = [
     }
 ];
 
+const modalList = document.querySelectorAll(".modal");
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -93,20 +94,36 @@ function getCardElement(data) {
     return cardElement;
 }
 
+function modalEscCloser(event) {
+    if (event.key === "Escape") {
+        closeModal(event.currentTarget);
+    };
+}
 
-function openModal(modal){
+function openModal(modal) {
     modal.classList.add("modal_is-opened");
+    modal.addEventListener("keydown", modalEscCloser);
+    modal.focus();
 }
 
-function closeModal(modal){
+function closeModal(modal) {
     modal.classList.remove("modal_is-opened");
+    modal.removeEventListener("keydown", modalEscCloser);
 }
+
+modalList.forEach((modal) => {
+    modal.addEventListener("click", function(event) {
+        if (event.target.classList.contains("modal")){
+            modal.classList.remove("modal_is-opened");
+        }
+    });
+});
 
 editProfileBtn.addEventListener("click", function () {
     editProfileNameInput.value = profileNameEl.textContent;
     editProfileDescriptionInput.value = profileDescriptionEl.textContent;
     openModal(editProfileModal);
-    resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput]);
+    resetValidation(editProfileForm, [editProfileNameInput, editProfileDescriptionInput], settings);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
